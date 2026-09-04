@@ -13,3 +13,7 @@ when to use it, then a plain-markdown body explaining how. Each
 
 - [corkboard-network-diagram](corkboard-network-diagram/) — turn a set
   of related concepts into a physical pin-and-string corkboard diagram.
+- [three-pass-prose-repair](three-pass-prose-repair/) — fix AI-flavored
+  writing at the structural level (plot/document architecture, then
+  pacing, then word choice last), for fiction and for professional
+  documents alike.
