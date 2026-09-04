@@ -1,6 +1,6 @@
 ---
 name: corkboard-network-diagram
-description: Generate an image that shows a set of related concepts as a physical corkboard pin-and-string diagram — paper cards, pushpins, and real red string connecting them, no text rendered anywhere. Use when asked to illustrate a network, a system, or a set of related ideas in a tactile, non-digital style, instead of a flat diagram or icon grid.
+description: Generate an image that shows a set of related concepts as a physical corkboard pin-and-string diagram, with paper cards, pushpins, and real red string connecting them, and no text rendered anywhere. Use when asked to illustrate a network, a system, or a set of related ideas in a tactile, non-digital style, instead of a flat diagram or icon grid.
 ---
 
 # Corkboard network diagram
@@ -14,12 +14,12 @@ connects the cards as edges.
 
 The user asks for an illustration of a network, a system, or a set of
 related concepts, and wants a tactile, hand-assembled look rather than
-a clean vector diagram — a detective-board or research-wall aesthetic,
+a clean vector diagram: a detective-board or research-wall aesthetic,
 without the clutter that usually implies.
 
 ## How to use it
 
-1. List the concepts to illustrate — 4 to 6 works best. More than that
+1. List the concepts to illustrate. Use 4 to 6 concepts. More than that
    crowds the frame.
 2. Send the prompt below to an image model that supports texture and
    material detail in its prompts (tested against GPT Image 2, through
@@ -46,7 +46,7 @@ aspect ratio.
 
 ## Result
 
-A dark-mode-friendly counterpart works too — ask for an exact color
+A dark-mode-friendly counterpart works too. Ask for an exact color
 inversion (background to near-black, marks to white or light gray, same
 shapes and positions) as a second pass on the result.
 
@@ -55,7 +55,7 @@ shapes and positions) as a second pass on the result.
 Inspired by [xxd-panel-087](https://github.com/nevertoday/xxd-panel-087),
 which transforms an uploaded photo into a similar pin-and-string style.
 This skill is a simpler, from-scratch English prompt for a plain
-concept network instead of a photo transform — it shares the aesthetic,
+concept network instead of a photo transform. It shares the aesthetic,
 not the source code or the original prompt text.
 
 Tested on [nimaarki.com](https://nimaarki.com), 2026-08-30.

@@ -4,17 +4,17 @@ Original prompts and tool skills used on [nimaarki.com](https://nimaarki.com)'s
 [Skills page](https://dfnwhah6bfd5t.cloudfront.net/skills/).
 
 One folder per skill, in the same `SKILL.md` format
-[Claude Skills](https://docs.claude.com/en/docs/claude-code/skills) use —
+[Claude Skills](https://docs.claude.com/en/docs/claude-code/skills) use:
 YAML frontmatter (`name`, `description`) naming what the skill is and
 when to use it, then a plain-markdown body explaining how. Each
 `SKILL.md` is self-contained: copy the folder, read it, use it.
 
 ## Skills
 
-- [corkboard-network-diagram](corkboard-network-diagram/) — turn a set
+- [corkboard-network-diagram](corkboard-network-diagram/): turn a set
   of related concepts into a physical pin-and-string corkboard diagram.
-- [three-pass-prose-repair](three-pass-prose-repair/) — fixes writing
-  that reads flat, generic, or obviously AI-written. Fixes how the
+- [three-pass-prose-repair](three-pass-prose-repair/): fixes writing
+  that reads flat, generic, or obviously AI-written. It fixes how the
   piece is built first, then the flow, then the words last, instead of
   just swapping words. Two modes: `review` (says what's wrong) and
   `repair` (fixes it step by step). Works on fiction and on everyday
