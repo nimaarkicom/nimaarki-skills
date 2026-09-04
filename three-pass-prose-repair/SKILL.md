@@ -1,6 +1,6 @@
 ---
 name: three-pass-prose-repair
-description: Fixes writing that reads flat, generic, or obviously AI-written. Most fixes only swap out words, which barely helps — this fixes the bigger problem first, how the piece is built, then the flow, then the words last. Two modes: review (says what's wrong) and repair (fixes it step by step). Works on fiction and on everyday documents (release notes, PR replies, postmortems, technical articles).
+description: "Fixes writing that reads flat, generic, or obviously AI-written. Most fixes only swap out words, which barely helps — this fixes the bigger problem first, how the piece is built, then the flow, then the words last. Two modes: review (says what's wrong) and repair (fixes it step by step). Works on fiction and on everyday documents (release notes, PR replies, postmortems, technical articles)."
 ---
 
 # Fix writing that sounds like AI
