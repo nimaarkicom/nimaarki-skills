@@ -1,156 +1,101 @@
 ---
 name: three-pass-prose-repair
-description: Self-review checklist that fixes AI-flavored writing at the structural level first — plot/document architecture, then pacing and flow, then word choice last — instead of just swapping vocabulary. Use when a draft (fiction or a professional document like release notes, a PR reply, or a postmortem) reads competent but flat, formulaic, or "obviously AI-written," and word-level fixes alone haven't helped.
+description: Fix AI-flavored writing at the structural level first — plot or document architecture, then discourse flow and pacing, then word choice last — instead of just swapping vocabulary. Two operations, review (diagnose only) and repair (apply the fix), each routed to a reference file: fiction and narrative essays load references/structural-tells.md, professional documents (release notes, PR replies, postmortems, technical articles) load references/professional-docs.md. Use when a draft reads competent but flat, formulaic, or "obviously AI-written," and a word-level pass alone hasn't fixed it.
 ---
 
 # Three-pass prose repair
 
-Most editing passes start and end at the sentence level: cut the clichés,
-vary the vocabulary, trim the em-dashes. That helps a little, but it treats
-the symptom. The actual research on what makes AI-written fiction read as
-AI-written found the tell sits one layer up, in the *shape* of the story
-itself — the plot's causal chain, how emotion gets rendered, how the ending
-resolves — not in which words fill it in.
+Most editing passes start and stop at the sentence level: cut the clichés,
+vary the vocabulary, trim the em-dashes. That helps a little, but the
+research this skill is built on found the strongest tell sits one layer up
+— in the *shape* of the piece, not the words filling it in. This skill
+routes a request to the right reference file, then walks it through the
+same order of operations every time: architecture first, flow second,
+words last.
 
-This skill is a three-pass order of operations: fix the architecture first,
-then the flow, and only then the words. It also includes a lighter version
-of the same idea for professional documents, where the equivalent problem
-is filler, hedging, and one-size-fits-all structure rather than plot.
+It covers two kinds of writing, because the failure mode is different in
+each:
 
-This is a writing-craft tool. The goal is prose that reads as genuinely
-well-built and specific to its own story or situation — not formulaic,
-not generic — for a human reader's benefit. It is not a tool for evading
-any particular detector, and it does not claim to make anything
-undetectable; it makes writing better by fixing the actual structural
-habits that make it feel thin.
+- **Fiction and narrative essays** — the tell is architectural: a plot
+  that resolves too cleanly, emotion rendered only as physical sensation,
+  a theme the narrator explains rather than lets emerge.
+- **Professional documents** — release notes, PR/issue replies,
+  postmortems, technical articles — the tell is informational: filler
+  that carries no signal, hedging where a plain judgment was needed,
+  one-size-fits-all structure that ignores what the document is for.
 
-## Why structure first
+This is a writing-craft skill. The goal is prose that reads as genuinely
+well-built and specific to its own situation, for a human reader's
+benefit — not formulaic, not generic. It makes no claim about defeating
+any detector and should never be framed that way; it fixes the actual
+structural habits that make writing feel thin, which happens to be the
+same habits the cited research measured as distinguishing AI writing
+from human writing.
 
-[StoryScope](https://arxiv.org/abs/2604.03136) (Russell et al., 2026 —
-UMD + Google DeepMind) trained a classifier on 61,608 stories: 10,272
-prompts each written once by a human author and once by five frontier
-LLMs (Claude, GPT, Gemini, DeepSeek, Kimi). Using *only* 304 narrative-
-structure features — no vocabulary, no sentence-level style at all — the
-classifier told human from AI fiction at 93.2% macro-F1. When the same AI
-stories were then given a full surface-style rewrite (LAMP-style editing:
-new vocabulary, new syntax, clichés removed), detectability barely moved:
-95.5% down to 93.9%. The structural tells survive a wording pass almost
-untouched.
+## Operations
 
-The paper's own qualitative read of what those 304 features amount to:
-AI fiction over-explains its own theme, keeps a single tidy causal chain
-with few subplots, renders emotion almost entirely as physical sensation,
-avoids naming anything from the real world, and resolves endings through
-the protagonist's internal acceptance or growth far more often than human
-writing does. None of that is a vocabulary problem, so no vocabulary fix
-touches it.
+| Operation | Contract |
+|---|---|
+| **review** | Diagnose only — no edits. Read the routed reference file(s), walk the draft against each check, and report findings with the specific line or passage that triggered each one. Stop there; apply nothing until asked. |
+| **repair** | Apply the fix, in order: Pass 1 architecture, Pass 2 flow, Pass 3 surface word choice. Do the passes in sequence — don't start with Pass 3, since that's the layer the underlying research found moves least on its own. |
 
-## How to use it
+Both operations load the same reference material; `review` reads it as a
+checklist to score against, `repair` reads it as edit instructions.
 
-Paste the checklist below along with your draft into a model, or walk
-through it yourself as a human editor. Work the passes **in order** —
-don't jump to Pass 3 first, that's the part that changes least.
+## Routing
 
-```
-Review this draft in three passes, in this order. Do not skip ahead to
-Pass 3 before finishing Pass 1 and Pass 2.
+| Text type | Load |
+|---|---|
+| Fiction, short stories, narrative essays | `references/structural-tells.md` |
+| Release notes, changelogs, announcements | `references/professional-docs.md` §Release notes |
+| PR replies, issue replies, code-review comments | `references/professional-docs.md` §PR and issue replies |
+| Incident postmortems / RCAs | `references/professional-docs.md` §Postmortems |
+| Technical articles, deep-dive blog posts | `references/professional-docs.md` §Technical articles |
+| Anything else non-fiction | `references/professional-docs.md`, general checklist section only |
 
-PASS 1 — ARCHITECTURE (plot / document structure)
-Look for these specific patterns and flag or fix each one you find:
-- Does the narrator or writer explain the theme, moral, or takeaway
-  directly, instead of letting it emerge from what happens? Cut the
-  direct statement; trust the reader to get there.
-- Is there one single, tidy causal chain from start to end with no
-  subplot, no dead end, no loose thread? Add one that doesn't resolve,
-  or braid in a second thread that's thematically related but not
-  causally tidy.
-- Is emotion shown only through physical sensation (tight throat, cold
-  sweat, a dimming room) and never once stated plainly ("she was
-  afraid")? Mix both modes in — don't let "show don't tell" become a
-  rule applied to every single beat.
-- Are there zero references to anything real — no named place, work,
-  person, or brand? Name something real and specific where it would
-  plausibly come up.
-- Does the ending resolve cleanly through the protagonist's own internal
-  growth or acceptance? Consider an ending that resolves through outside
-  circumstance instead, or one that stays a little unresolved.
-- Was a main character introduced with an external description dump
-  (appearance, backstory, a summary of who they are)? Introduce them
-  through action or dialogue instead and let the reader infer the rest.
+## Pass order (applies to both routes)
 
-PASS 2 — FLOW (pacing / discourse structure)
-- Does every paragraph or section follow the same template (state a
-  fact, then reflect on it, then move on)? Break the pattern in at
-  least a few places — vary paragraph length and rhythm on purpose.
-- Is all the context front-loaded early, with nothing held back? Move
-  at least one piece of context later, so the reader has to reinterpret
-  something they already read.
-- Does the middle sag with even, undifferentiated pacing? Compress the
-  parts that matter least, slow down for the one or two moments that
-  matter most.
-- Does the opening over-explain the setting before anything happens?
-  Cut it down; let location emerge through action.
+1. **Architecture** — the plot's causal structure, or the document's
+   argument structure: what claims it makes, in what order, and how it
+   resolves. Fixed first because it is the most expensive to retrofit
+   and the layer word-level editing does not reach.
+2. **Flow** — pacing, paragraph rhythm, where information is revealed
+   versus withheld, whether the piece is uniform end to end or varies
+   the way a single author's attention naturally would.
+3. **Surface** — clichés, repeated sentence templates, vocabulary,
+   register. Real and worth doing, but last, and it should not be
+   allowed to stand in for the first two passes.
 
-PASS 3 — SURFACE (word choice — do this last, not first)
-- Clichés and stock phrases ("delve into," "tapestry of," "a testament
-  to").
-- Repeated sentence templates — read three consecutive sentences aloud;
-  if they scan with the same rhythm and shape, rebuild one.
-- Vocabulary or register that doesn't match the voice established
-  elsewhere in the piece.
+## Calibration
 
-CALIBRATION
-Don't apply every fix everywhere — that just trades one formula for
-another. Pick the 3-5 changes that matter most for this specific piece
-and leave the rest. The goal is prose that reads like it was built for
-this one story or document, not prose that scores well against a
-checklist.
-```
+Don't apply every check in the reference files to every piece — that
+just trades one formula for another. The measured human baseline for
+almost every feature below sits at a moderate value, not an extreme one;
+overshooting a check as far as possible in the opposite direction creates
+its own detectable pattern. Fix what the draft actually shows, leave the
+rest, and never invent a specific (a name, a number, a date, a citation)
+to satisfy a "be more specific" check — a confident wrong detail is worse
+than a generic true one.
 
-## Adapting this for professional documents
-
-Fiction's "architecture" problem shows up in professional writing as a
-structure and honesty problem instead: filler that carries no real
-information, hedging where a plain judgment was called for, and a
-one-size-fits-all shape that ignores what the document is actually for.
-Same three-pass order, lighter checklist:
-
-- **Release notes / announcements** — lead with the user-facing impact,
-  not the internal work. Cite the actual PR, ticket, or artifact behind
-  each claim. Cut marketing inflation ("blazing fast," "seamless") that
-  isn't backed by a number.
-- **PR / issue replies** — answer the actual question first. Cite
-  `file:line`, not a paraphrase. Drop reflexive praise ("Great question!",
-  "This looks great!"). Match reply length to how much is actually at
-  stake, not to how thorough it's possible to sound.
-- **Postmortems** — blameless toward the people involved, blunt about the
-  mechanism that failed. Include real timestamps, the dead ends that were
-  tried and didn't work, and action items with a named owner, not a
-  passive "we should."
-- **Tickets / work orders** — title states the outcome, not the task.
-  Acceptance criteria that can actually be tested. Link to related
-  context instead of re-explaining it inline.
-
-## Credit
+## Credit and sources
 
 This skill is inspired by [sepia](https://github.com/Nanako0129/sepia)
-(Nanako0129, MIT license) — a portable Agent Skill that runs the same
-architecture-first idea as a full multi-file plugin, with per-model
-fingerprints, a 30-feature diagnosis rubric, and domain-specific rule
-sets for professional prose. This is a from-scratch, single-file
-distillation of the same underlying research into one copy-pasteable
-checklist — it does not copy sepia's text, its packaging, or its
-per-model calibration data, only the three-pass ordering idea and the
-research it's grounded in.
+(Nanako0129, MIT license), a portable Agent Skill that runs the same
+architecture-first idea as a full multi-file plugin — routing, four
+operations, per-model fingerprints, and its own much larger reference
+library. This is an independent, from-scratch rebuild of the same
+underlying idea and research base as a smaller two-operation skill: own
+wording throughout, own choice of which findings to surface and how,
+crediting sepia for the shape of the idea rather than copying its files.
 
-The research itself is [StoryScope](https://arxiv.org/abs/2604.03136)
-(Russell, Rajendhran, Pham, Iyyer, Wieting — 2026, arXiv:2604.03136,
-UMD + Google DeepMind): 61,608 stories, human and 5 frontier LLMs,
-304 narrative-structure features, 93.2% macro-F1 detection from
-structure alone, 95.5% → 93.9% after a full surface-style rewrite. The
-specific checklist items above (theme over-explanation, single causal
-chain, embodied-only emotion, no real-world references, growth/
-acceptance endings) are the paper's own named findings, not sepia's or
-this skill's invention.
+The research base is listed in full, with real per-finding citations, in
+`references/structural-tells.md` and `references/professional-docs.md`.
+The anchor study for the fiction route is
+[StoryScope](https://arxiv.org/abs/2604.03136) (Russell, Rajendhran,
+Pham, Iyyer, Wieting — arXiv:2604.03136, submitted 2026-04-03, latest
+revision v6 2026-08-10): 61,608 stories from human authors and five
+frontier LLMs, 304 narrative-structure features, 93.2% macro-F1
+human-vs-AI detection from structure alone, holding at 93.9% (down from
+95.5%) after a full surface-style rewrite of the AI stories.
 
 Tested on [nimaarki.com](https://nimaarki.com), 2026-09-03.
