@@ -1,36 +1,33 @@
 ---
 name: three-pass-prose-repair
-description: Fix AI-flavored writing at the structural level first — plot or document architecture, then discourse flow and pacing, then word choice last — instead of just swapping vocabulary. Two operations, review (diagnose only) and repair (apply the fix), each routed to a reference file: fiction and narrative essays load references/structural-tells.md, professional documents (release notes, PR replies, postmortems, technical articles) load references/professional-docs.md. Use when a draft reads competent but flat, formulaic, or "obviously AI-written," and a word-level pass alone hasn't fixed it.
+description: Fixes writing that reads flat, generic, or obviously AI-written. Most fixes only swap out words, which barely helps — this fixes the bigger problem first, how the piece is built, then the flow, then the words last. Two modes: review (says what's wrong) and repair (fixes it step by step). Works on fiction and on everyday documents (release notes, PR replies, postmortems, technical articles).
 ---
 
-# Three-pass prose repair
+# Fix writing that sounds like AI
 
-Most editing passes start and stop at the sentence level: cut the clichés,
-vary the vocabulary, trim the em-dashes. That helps a little, but the
-research this skill is built on found the strongest tell sits one layer up
-— in the *shape* of the piece, not the words filling it in. This skill
-routes a request to the right reference file, then walks it through the
-same order of operations every time: architecture first, flow second,
-words last.
+**In plain terms:** most tools that try to fix AI-sounding writing just swap
+out a few words. That barely helps. The bigger problem is usually how the
+piece is put together — a story that wraps up too neatly, or a report that
+buries the point in filler. This fixes that first, before touching a single
+word.
 
-It covers two kinds of writing, because the failure mode is different in
+It covers two kinds of writing, because the problem shows up differently in
 each:
 
-- **Fiction and narrative essays** — the tell is architectural: a plot
-  that resolves too cleanly, emotion rendered only as physical sensation,
-  a theme the narrator explains rather than lets emerge.
-- **Professional documents** — release notes, PR/issue replies,
-  postmortems, technical articles — the tell is informational: filler
-  that carries no signal, hedging where a plain judgment was needed,
-  one-size-fits-all structure that ignores what the document is for.
+- **Fiction and narrative essays** — a plot that resolves too cleanly,
+  feelings shown only as a racing heart or a tight chest instead of
+  something real, a theme the narrator just states instead of letting the
+  reader feel it.
+- **Everyday documents** — release notes, PR/issue replies, postmortems,
+  technical articles — filler that says nothing, hedging where a plain
+  answer was needed, the same shape used for every document regardless of
+  what it's actually for.
 
-This is a writing-craft skill. The goal is prose that reads as genuinely
-well-built and specific to its own situation, for a human reader's
-benefit — not formulaic, not generic. It makes no claim about defeating
-any detector and should never be framed that way; it fixes the actual
-structural habits that make writing feel thin, which happens to be the
-same habits the cited research measured as distinguishing AI writing
-from human writing.
+This is a writing-craft tool. The goal is writing that reads like it was
+actually built for its own situation — not formulaic, not generic — for
+the reader's benefit. It is not about beating any detector, and should
+never be described that way; it fixes the real habits that make writing
+feel thin, which happen to be the same habits the research below measured.
 
 ## Operations
 

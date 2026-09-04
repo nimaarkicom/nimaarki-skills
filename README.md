@@ -13,10 +13,10 @@ when to use it, then a plain-markdown body explaining how. Each
 
 - [corkboard-network-diagram](corkboard-network-diagram/) — turn a set
   of related concepts into a physical pin-and-string corkboard diagram.
-- [three-pass-prose-repair](three-pass-prose-repair/) — a routing
-  `SKILL.md` plus two `references/` files (fiction, professional
-  documents). Fixes AI-flavored writing at the structural level first
-  (plot/document architecture, then pacing, then word choice last).
-  Two operations, `review` (diagnose only) and `repair` (apply the
-  fix), each grounded in real cited research — StoryScope and ten more
-  published studies, one real finding and citation per checklist item.
+- [three-pass-prose-repair](three-pass-prose-repair/) — fixes writing
+  that reads flat, generic, or obviously AI-written. Fixes how the
+  piece is built first, then the flow, then the words last, instead of
+  just swapping words. Two modes: `review` (says what's wrong) and
+  `repair` (fixes it step by step). Works on fiction and on everyday
+  documents like release notes and PR replies. Backed by 11 real,
+  cited studies, not guesswork.
